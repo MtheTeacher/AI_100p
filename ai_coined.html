@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Begreppet "AI" Myntades</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      .page-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+        display: flex;
+        flex-direction: column;
+        font-family: 'Inter', sans-serif;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        padding: 40px;
+      }
+      
+      .header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      
+      .main-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+      
+      .subtitle {
+        font-size: 1.5rem;
+        opacity: 0.9;
+      }
+      
+      .content-section {
+        background: rgba(255,255,255,0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+        margin-bottom: 1.5rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #ffd700;
+      }
+      
+      .text-block {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+      
+      .example-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      
+      .example-card {
+        background: rgba(255,255,255,0.15);
+        border-radius: 15px;
+        padding: 1.5rem;
+        border: 1px solid rgba(255,255,255,0.2);
+      }
+      
+      .example-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        color: #3498db;
+      }
+      
+      .example-desc {
+        font-size: 1rem;
+        line-height: 1.5;
+        opacity: 0.9;
+      }
+      
+      .youtube-section {
+        background: rgba(255,255,255,0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+        margin-bottom: 1.5rem;
+      }
+      
+      .youtube-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #ff6b6b;
+      }
+      
+      .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      
+      .questions-section {
+        background: rgba(255,255,255,0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+      }
+      
+      .questions-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #8360c3;
+      }
+      
+      .question-item {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+      
+      .question-item::before {
+        content: '\2022'; /* Bullet point */
+        color: #8360c3;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1.5em;
+        position: absolute;
+      }
+      
+      .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: rgba(255,255,255,0.2);
+        padding: 0.75rem 1.5rem;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
+        transition: background 0.3s ease;
+      }
+      
+      .back-button:hover {
+        background: rgba(255,255,255,0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <a href="ai_definitions.html" class="back-button">
+        <i class="fas fa-arrow-left mr-2"></i> Tillbaka
+      </a>
+      
+      <div class="header">
+        <h1 class="main-title">Begreppet "AI" Myntades</h1>
+        <p class="subtitle">Födelsen av ett Fält</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-lightbulb"></i>
+          Dartmouth-konferensen 1956
+        </h2>
+        <p class="text-block">
+          Begreppet "Artificiell Intelligens" (AI) myntades officiellt vid Dartmouth Summer Research Project on Artificial Intelligence, en banbrytande konferens som hölls vid Dartmouth College i Hanover, New Hampshire, sommaren 1956. Konferensen samlade några av de mest framstående forskarna inom datavetenskap, matematik och kognitiv psykologi, inklusive John McCarthy, Marvin Minsky, Nathaniel Rochester och Claude Shannon. Deras mål var att utforska idén om att bygga maskiner som kunde simulera mänsklig intelligens.
+        </p>
+        <div class="example-grid">
+          <div class="example-card">
+            <div class="example-title">John McCarthy</div>
+            <div class="example-desc">Matematiker och datavetare, allmänt erkänd för att ha myntat termen "artificiell intelligens".</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Marvin Minsky</div>
+            <div class="example-desc">Pionjär inom AI, känd för sitt arbete med neurala nätverk och robotik.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Nathaniel Rochester</div>
+            <div class="example-desc">En av skaparna av IBM 701, den första kommersiella vetenskapliga datorn.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Claude Shannon</div>
+            <div class="example-desc">"Informationssteorins fader", vars arbete lade grunden för digital kommunikation.</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-bullhorn"></i>
+          Varför "Artificiell Intelligens"?
+        </h2>
+        <p class="text-block">
+          John McCarthy föreslog termen "artificiell intelligens" för att skilja fältet från cybernetik, som var ett mer etablerat område vid den tiden. Han ville ha ett nytt namn för att betona fokus på intelligens snarare än bara kontrollsystem. Detta namn bidrog till att etablera AI som ett distinkt forskningsområde och lade grunden för dess framtida utveckling. Konferensen markerade början på AI som ett akademiskt fält och satte agendan för decennier av forskning.
+        </p>
+      </div>
+      
+      <div class="youtube-section">
+        <h2 class="youtube-title">
+          <i class="fab fa-youtube"></i>
+          Se Mer om AI:s Födelse
+        </h2>
+        <div class="example-grid">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/P-2_2g_QEPQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/j1_f6Q0r25w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      
+      <div class="questions-section">
+        <h2 class="questions-title">
+          <i class="fas fa-question-circle"></i>
+          Frågor att Fundera Över
+        </h2>
+        <ul>
+          <li class="question-item">Hur har definitionen av AI förändrats sedan 1956, och varför?</li>
+          <li class="question-item">Vilken betydelse har Dartmouth-konferensen haft för AI:s utveckling?</li>
+          <li class="question-item">Varför var det viktigt att skilja AI från andra befintliga fält som cybernetik?</li>
+          <li class="question-item">Vilka utmaningar stod AI-forskarna inför på 1950-talet som fortfarande är relevanta idag?</li>
+          <li class="question-item">Hur har den ursprungliga visionen från Dartmouth-konferensen förverkligats eller avvikit från dagens AI?</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+
