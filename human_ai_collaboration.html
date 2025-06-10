@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Människa vs AI: Samarbete</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      .page-container {
+        max-width: 1280px;
+        width: 100%;
+        min-height: 100vh;
+        margin: 0 auto;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        flex-direction: column;
+        font-family: "Inter", sans-serif;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        padding: 40px 20px;
+      }
+      @media (max-width: 768px) {
+        .page-container {
+          padding: 20px 15px;
+        }
+      }
+      @media (max-width: 480px) {
+        .page-container {
+          padding: 15px 10px;
+        }
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .main-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.8;
+      }
+      .content-section {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        margin-bottom: 1.5rem;
+      }
+      .section-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #ffd700;
+      }
+      .text-block {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+      .example-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      .example-card {
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 15px;
+        padding: 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .example-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        color: #4ecdc4;
+      }
+      .example-desc {
+        font-size: 1rem;
+        line-height: 1.5;
+        opacity: 0.9;
+      }
+      .questions-section {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .questions-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #8360c3;
+      }
+      .question-item {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+      .question-item::before {
+        content: "\2022"; /* Bullet point */
+        color: #8360c3;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1.5em;
+        position: absolute;
+      }
+      /* --- Back Button CSS --- */
+      .back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: rgba(0,0,0,0.3); /* Darker for better visibility on various backgrounds */
+        border: 1px solid rgba(255,255,255,0.3);
+        border-radius: 50px;
+        padding: 10px 15px; /* Slightly smaller padding */
+        font-size: 0.9rem; /* Slightly smaller font */
+        color: white;
+        text-decoration: none;
+        backdrop-filter: blur(8px); /* Slightly less blur */
+        transition: all 0.3s ease;
+        z-index: 1000; /* Ensure it is on top */
+        display: flex; /* For icon alignment */
+        align-items: center; /* For icon alignment */
+      }
+      
+      .back-button:hover {
+        background: rgba(0,0,0,0.5); /* Darker hover */
+        transform: translateX(-3px); /* Slightly less transform */
+      }
+      .back-button i {
+        margin-right: 8px; /* Space between icon and text */
+      }
+    </style>
+  </head>
+  <body>
+    <a href="human_vs_ai.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>Tillbaka
+    </a>
+    <div class="page-container">
+      <div class="header">
+        <h1 class="main-title">Människa + AI: Samarbete</h1>
+        <p class="subtitle">När människa och AI arbetar bäst tillsammans</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-handshake"></i>
+          Synergi: Mer än Summan av Delarna
+        </h2>
+        <p class="text-block">
+          Istället för att se människa och AI som konkurrenter, är det mer fruktbart att betrakta dem som komplementära krafter. När mänskliga styrkor kombineras med AI:s förmågor uppstår en synergi som kan leda till resultat som ingen av parterna skulle kunna uppnå på egen hand. AI kan hantera de repetitiva, dataintensiva och beräkningskrävande uppgifterna, medan människor kan fokusera på kreativitet, etiska bedömningar, social interaktion och komplex problemlösning som kräver intuition och kontextuell förståelse.
+        </p>
+        <p class="text-block">
+          Detta samarbete skapar nya möjligheter inom nästan alla sektorer, från sjukvård och utbildning till konst och vetenskap. Målet är inte att ersätta människan, utan att förstärka våra förmågor och frigöra oss från monotona uppgifter så att vi kan ägna oss åt mer meningsfullt och värdeskapande arbete.
+        </p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-lightbulb"></i>
+          Exempel på Framgångsrikt Samarbete
+        </h2>
+        <p class="text-block">
+          Här är några områden där människa och AI redan samarbetar framgångsrikt:
+        </p>
+        <div class="example-grid">
+          <div class="example-card">
+            <div class="example-title">Medicinsk Diagnostik</div>
+            <div class="example-desc">AI kan analysera medicinska bilder (röntgen, MR) med hög precision för att upptäcka avvikelser, medan läkare använder dessa insikter för att ställa diagnos och planera behandling, med sin expertis och empati för patienten.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Kreativt Arbete</div>
+            <div class="example-desc">Inom design, musik och skrivande kan AI generera idéer, utkast eller variationer. Människor tar sedan dessa utgångspunkter och förfinar, lägger till känslor och säkerställer konstnärlig integritet.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Finansanalys</div>
+            <div class="example-desc">AI kan bearbeta enorma mängder finansiell data, identifiera trender och förutsäga marknadsrörelser. Finansanalytiker använder sedan dessa analyser för att fatta strategiska investeringsbeslut, med hänsyn till makroekonomiska faktorer och mänskligt beteende.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Utbildning</div>
+            <div class="example-desc">AI-drivna plattformar kan anpassa läromedel och övningar till varje elevs individuella behov och tempo. Lärare kan då fokusera på att ge personlig feedback, inspirera och hantera klassrumsdynamiken.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Kundtjänst</div>
+            <div class="example-desc">Chatbots och AI-assistenter kan hantera rutinfrågor och ge snabba svar. Mer komplexa eller känsliga ärenden eskaleras till mänskliga agenter som kan erbjuda empati och skräddarsydda lösningar.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-cogs"></i>
+          Framtiden för Människa-AI Samarbete
+        </h2>
+        <p class="text-block">
+          Framtiden kommer sannolikt att präglas av allt djupare integration mellan människa och AI. Vi kommer att se utvecklingen av "centaur-system", där människa och maskin arbetar sömlöst tillsammans, där varje part bidrar med sina unika styrkor. Detta kräver att vi utbildar oss i att samarbeta med AI, förstår dess begränsningar och potential, och utvecklar nya arbetsmetoder som maximerar fördelarna med denna synergi.
+        </p>
+        <p class="text-block">
+          Det handlar om att skapa en framtid där AI inte bara är ett verktyg, utan en intelligent partner som hjälper oss att lösa några av världens mest komplexa problem och att uppnå vår fulla potential som människor.
+        </p>
+      </div>
+      
+      <div class="questions-section">
+        <h2 class="questions-title">
+          <i class="fas fa-question-circle"></i>
+          Frågor att Fundera Över
+        </h2>
+        <ul>
+          <li class="question-item">Vilka nya yrkesroller kan uppstå när människa och AI samarbetar mer intensivt?</li>
+          <li class="question-item">Hur kan utbildningssystemet anpassas för att förbereda studenter för en framtid med människa-AI samarbete?</li>
+          <li class="question-item">Vilka etiska utmaningar kan uppstå när ansvaret för beslut delas mellan människa och AI?</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+

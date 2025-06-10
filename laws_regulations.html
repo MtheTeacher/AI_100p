@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lagar och Bestämmelser för AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      .page-container {
+        max-width: 1280px;
+        width: 100%;
+        min-height: 100vh;
+        margin: 0 auto;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        flex-direction: column;
+        font-family: "Inter", sans-serif;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        padding: 40px 20px;
+      }
+      @media (max-width: 768px) {
+        .page-container {
+          padding: 20px 15px;
+        }
+      }
+      @media (max-width: 480px) {
+        .page-container {
+          padding: 15px 10px;
+        }
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .main-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.8;
+      }
+      .content-section {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        margin-bottom: 1.5rem;
+      }
+      .section-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #ffd700;
+      }
+      .text-block {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+      .law-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      .law-card {
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 15px;
+        padding: 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .law-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        color: #3498db;
+      }
+      .law-desc {
+        font-size: 1rem;
+        line-height: 1.5;
+        opacity: 0.9;
+      }
+      .questions-section {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .questions-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #8360c3;
+      }
+      .question-item {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+      .question-item::before {
+        content: "\2022"; /* Bullet point */
+        color: #8360c3;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1.5em;
+        position: absolute;
+      }
+      /* --- Back Button CSS --- */
+      .back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: rgba(0,0,0,0.3); /* Darker for better visibility on various backgrounds */
+        border: 1px solid rgba(255,255,255,0.3);
+        border-radius: 50px;
+        padding: 10px 15px; /* Slightly smaller padding */
+        font-size: 0.9rem; /* Slightly smaller font */
+        color: white;
+        text-decoration: none;
+        backdrop-filter: blur(8px); /* Slightly less blur */
+        transition: all 0.3s ease;
+        z-index: 1000; /* Ensure it is on top */
+        display: flex; /* For icon alignment */
+        align-items: center; /* For icon alignment */
+      }
+      
+      .back-button:hover {
+        background: rgba(0,0,0,0.5); /* Darker hover */
+        transform: translateX(-3px); /* Slightly less transform */
+      }
+      .back-button i {
+        margin-right: 8px; /* Space between icon and text */
+      }
+    </style>
+  </head>
+  <body>
+    <a href="ethics_society.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>Tillbaka
+    </a>
+    <div class="page-container">
+      <div class="header">
+        <h1 class="main-title">Lagar och Bestämmelser för AI</h1>
+        <p class="subtitle">Hur samhället reglerar AI-utveckling</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-gavel"></i>
+          EU:s AI-förordning (AI Act)
+        </h2>
+        <p class="text-block">
+          EU:s AI-förordning är världens första omfattande lagstiftning som reglerar artificiell intelligens. Målet är att säkerställa att AI-system som används inom EU är säkra, transparenta, icke-diskriminerande och respekterar grundläggande rättigheter. Förordningen antar en riskbaserad strategi, där AI-system klassificeras i olika riskkategorier (oacceptabel risk, hög risk, begränsad risk, minimal risk) med olika krav beroende på risknivån.
+        </p>
+        <p class="text-block">
+          Högrisk-AI-system, som de som används inom kritisk infrastruktur, utbildning, rekrytering, brottsbekämpning och medicinteknik, kommer att omfattas av stränga krav på bland annat riskhantering, datakvalitet, mänsklig tillsyn och transparens. Förordningen syftar till att skapa ett ramverk som främjar innovation samtidigt som det skyddar medborgarna från potentiella skador orsakade av AI.
+        </p>
+        <div class="law-grid">
+          <div class="law-card">
+            <div class="law-title">Syfte:</div>
+            <div class="law-desc">Säkerställa säker, etisk och rättighetsrespekterande AI inom EU.</div>
+          </div>
+          <div class="law-card">
+            <div class="law-title">Riskbaserad:</div>
+            <div class="law-desc">Olika krav beroende på AI-systemets risknivå (t.ex. högrisk-AI).</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-user-lock"></i>
+          GDPR och Dataskydd
+        </h2>
+        <p class="text-block">
+          Den Allmänna Dataskyddsförordningen (GDPR) är en EU-förordning som trädde i kraft 2018 och har en betydande inverkan på hur AI-system får hantera personuppgifter. GDPR ger individer starka rättigheter över sina personuppgifter, inklusive rätten att få information om hur deras data behandlas, rätten till rättelse, rätten att bli glömd och rätten till dataportabilitet.
+        </p>
+        <p class="text-block">
+          För AI innebär detta att system måste utformas med "privacy by design" och "privacy by default", vilket innebär att dataskydd ska vara inbyggt i systemets design från början. Särskilt relevant för AI är rätten att inte bli föremål för ett beslut som enbart grundas på automatiserad behandling, inklusive profilering, om beslutet har rättsliga följder eller på liknande sätt i betydande grad påverkar personen. Detta kräver transparens och möjlighet till mänsklig granskning av AI-beslut.
+        </p>
+        <div class="law-grid">
+          <div class="law-card">
+            <div class="law-title">Fokus:</div>
+            <div class="law-desc">Skydd av personuppgifter och individens rättigheter.</div>
+          </div>
+          <div class="law-card">
+            <div class="law-title">AI-relevans:</div>
+            <div class="law-desc">Krav på "privacy by design" och rätt till mänsklig granskning av automatiserade beslut.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-copyright"></i>
+          Upphovsrätt och AI-genererat Innehåll
+        </h2>
+        <p class="text-block">
+          Framväxten av generativ AI, som kan skapa text, bilder, musik och till och med video, har skapat nya och komplexa frågor kring upphovsrätt. Vem äger upphovsrätten till innehåll som skapats av en AI? Är det AI:ns utvecklare, användaren som gav prompten, eller ingen alls?
+        </p>
+        <p class="text-block">
+          Traditionell upphovsrättslagstiftning bygger på idén om mänsklig kreativitet och originalitet. När AI skapar verk, utmanas dessa principer. Dessutom uppstår frågor om huruvida AI-system får tränas på upphovsrättsskyddat material utan tillstånd. Dessa frågor är ännu inte fullt lösta juridiskt och kommer sannolikt att kräva nya lagar och internationella överenskommelser.
+        </p>
+        <div class="law-grid">
+          <div class="law-card">
+            <div class="law-title">Utmaning:</div>
+            <div class="law-desc">Vem äger AI-genererat innehåll? Får AI tränas på upphovsrättsskyddat material?</div>
+          </div>
+          <div class="law-card">
+            <div class="law-title">Framtid:</div>
+            <div class="law-desc">Behov av nya lagar och internationella överenskommelser.</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="questions-section">
+        <h2 class="questions-title">
+          <i class="fas fa-question-circle"></i>
+          Frågor att Fundera Över
+        </h2>
+        <ul>
+          <li class="question-item">Hur kan lagstiftning hålla jämna steg med den snabba utvecklingen av AI?</li>
+          <li class="question-item">Vilka är de största utmaningarna med att implementera internationella AI-lagar?</li>
+          <li class="question-item">Hur kan vi säkerställa att AI-lagar skyddar medborgarna utan att hämma innovation?</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+

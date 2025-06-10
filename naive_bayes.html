@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematiska Grunder: Naiv Bayes</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      .page-container {
+        max-width: 1280px;
+        width: 100%;
+        min-height: 100vh;
+        margin: 0 auto;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        flex-direction: column;
+        font-family: "Inter", sans-serif;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        padding: 40px 20px;
+      }
+      @media (max-width: 768px) {
+        .page-container {
+          padding: 20px 15px;
+        }
+      }
+      @media (max-width: 480px) {
+        .page-container {
+          padding: 15px 10px;
+        }
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .main-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.8;
+      }
+      .content-section {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        margin-bottom: 1.5rem;
+      }
+      .section-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #ffd700;
+      }
+      .text-block {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+      .example-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      .example-card {
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 15px;
+        padding: 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .example-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        color: #4ecdc4;
+      }
+      .example-desc {
+        font-size: 1rem;
+        line-height: 1.5;
+        opacity: 0.9;
+      }
+      .questions-section {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .questions-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #8360c3;
+      }
+      .question-item {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+      .question-item::before {
+        content: "\2022"; /* Bullet point */
+        color: #8360c3;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1.5em;
+        position: absolute;
+      }
+      /* --- Back Button CSS --- */
+      .back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: rgba(0,0,0,0.3); /* Darker for better visibility on various backgrounds */
+        border: 1px solid rgba(255,255,255,0.3);
+        border-radius: 50px;
+        padding: 10px 15px; /* Slightly smaller padding */
+        font-size: 0.9rem; /* Slightly smaller font */
+        color: white;
+        text-decoration: none;
+        backdrop-filter: blur(8px); /* Slightly less blur */
+        transition: all 0.3s ease;
+        z-index: 1000; /* Ensure it is on top */
+        display: flex; /* For icon alignment */
+        align-items: center; /* For icon alignment */
+      }
+      
+      .back-button:hover {
+        background: rgba(0,0,0,0.5); /* Darker hover */
+        transform: translateX(-3px); /* Slightly less transform */
+      }
+      .back-button i {
+        margin-right: 8px; /* Space between icon and text */
+      }
+    </style>
+  </head>
+  <body>
+    <a href="mathematical_foundations.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>Tillbaka
+    </a>
+    <div class="page-container">
+      <div class="header">
+        <h1 class="main-title">Matematiska Grunder: Naiv Bayes</h1>
+        <p class="subtitle">Enkel men kraftfull sannolikhetsbaserad klassificering</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-calculator"></i>
+          Vad är Naiv Bayes?
+        </h2>
+        <p class="text-block">
+          Naiv Bayes är en familj av enkla, men ofta mycket effektiva, klassificeringsalgoritmer baserade på Bayes sats med ett "naivt" antagande om villkorlig oberoende mellan attributen. Trots detta förenklade antagande presterar Naiv Bayes-klassificerare förvånansvärt bra i många verkliga tillämpningar, särskilt inom textklassificering.
+        </p>
+        <p class="text-block">
+          Algoritmen är "naiv" eftersom den antar att förekomsten av ett visst attribut i en klass är oberoende av förekomsten av andra attribut. Till exempel, om du försöker klassificera en frukt som ett äpple, en banan eller en apelsin baserat på dess färg, form och storlek, skulle en Naiv Bayes-klassificerare anta att färgen är oberoende av formen och storleken, givet att frukten är ett äpple. I verkligheten är detta sällan sant, men i praktiken fungerar det ofta bra.
+        </p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-lightbulb"></i>
+          Hur Fungerar Det? (Bayes Sats)
+        </h2>
+        <p class="text-block">
+          Naiv Bayes bygger på Bayes sats, som beskriver sannolikheten för en händelse, baserat på förkunskaper om villkor som kan vara relaterade till händelsen. Formeln ser ut så här:
+        </p>
+        <p class="text-block text-center font-bold text-2xl my-4">
+          P(A|B) = P(B|A) * P(A) / P(B)
+        </p>
+        <p class="text-block">
+          Där:
+          <ul>
+            <li><span class="font-bold">P(A|B)</span> är den posteriora sannolikheten: sannolikheten för händelse A givet att B är sant.</li>
+            <li><span class="font-bold">P(B|A)</span> är likelihood: sannolikheten för händelse B givet att A är sant.</li>
+            <li><span class="font-bold">P(A)</span> är den prioriska sannolikheten: sannolikheten för händelse A.</li>
+            <li><span class="font-bold">P(B)</span> är beviset: sannolikheten för händelse B.</li>
+          </ul>
+        </p>
+        <p class="text-block">
+          I Naiv Bayes tillämpas detta för att beräkna sannolikheten för att en given datapunkt tillhör en viss klass, baserat på sannolikheten för dess attribut. Det "naiva" antagandet förenklar beräkningarna av P(B|A) genom att anta att attributen är oberoende.
+        </p>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-cogs"></i>
+          Exempel på Naiv Bayes-tillämpningar
+        </h2>
+        <div class="example-grid">
+          <div class="example-card">
+            <div class="example-title">Skräppostfiltrering</div>
+            <div class="example-desc">Klassificerar e-postmeddelanden som skräppost eller inte baserat på ordens förekomst.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Sentimentanalys</div>
+            <div class="example-desc">Avgör om en text (t.ex. en recension) uttrycker positiv, negativ eller neutral känsla.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Dokumentklassificering</div>
+            <div class="example-desc">Kategoriserar dokument i ämnen som sport, politik, teknik, etc.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Medicinsk Diagnostik</div>
+            <div class="example-desc">Förutsäga sannolikheten för en sjukdom baserat på symtom.</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="questions-section">
+        <h2 class="questions-title">
+          <i class="fas fa-question-circle"></i>
+          Frågor att Fundera Över
+        </h2>
+        <ul>
+          <li class="question-item">Varför kallas algoritmen "naiv"? Hur påverkar detta dess prestanda i praktiken?</li>
+          <li class="question-item">I vilka typer av problem är Naiv Bayes särskilt effektiv?</li>
+          <li class="question-item">Kan du tänka dig ett scenario där det naiva antagandet skulle leda till dåliga resultat?</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+

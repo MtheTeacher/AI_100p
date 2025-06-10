@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gruppdiskussioner om AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      .page-container {
+        max-width: 1280px;
+        width: 100%;
+        min-height: 100vh;
+        margin: 0 auto;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        flex-direction: column;
+        font-family: "Inter", sans-serif;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        padding: 40px 20px;
+      }
+      @media (max-width: 768px) {
+        .page-container {
+          padding: 20px 15px;
+        }
+      }
+      @media (max-width: 480px) {
+        .page-container {
+          padding: 15px 10px;
+        }
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .main-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.8;
+      }
+      .content-section {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        margin-bottom: 1.5rem;
+      }
+      .section-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #ffd700;
+      }
+      .text-block {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+      .discussion-points {
+        list-style: none;
+        padding: 0;
+      }
+      .discussion-point-item {
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 15px;
+        padding: 1.5rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        margin-bottom: 1.5rem;
+      }
+      .point-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        color: #4ecdc4;
+      }
+      .point-desc {
+        font-size: 1rem;
+        line-height: 1.5;
+        opacity: 0.9;
+      }
+      .questions-section {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .questions-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #8360c3;
+      }
+      .question-item {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+      .question-item::before {
+        content: "\2022"; /* Bullet point */
+        color: #8360c3;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1.5em;
+        position: absolute;
+      }
+      /* --- Back Button CSS --- */
+      .back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: rgba(0,0,0,0.3); /* Darker for better visibility on various backgrounds */
+        border: 1px solid rgba(255,255,255,0.3);
+        border-radius: 50px;
+        padding: 10px 15px; /* Slightly smaller padding */
+        font-size: 0.9rem; /* Slightly smaller font */
+        color: white;
+        text-decoration: none;
+        backdrop-filter: blur(8px); /* Slightly less blur */
+        transition: all 0.3s ease;
+        z-index: 1000; /* Ensure it is on top */
+        display: flex; /* For icon alignment */
+        align-items: center; /* For icon alignment */
+      }
+      
+      .back-button:hover {
+        background: rgba(0,0,0,0.5); /* Darker hover */
+        transform: translateX(-3px); /* Slightly less transform */
+      }
+      .back-button i {
+        margin-right: 8px; /* Space between icon and text */
+      }
+    </style>
+  </head>
+  <body>
+    <a href="interactive_exercises.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>Tillbaka
+    </a>
+    <div class="page-container">
+      <div class="header">
+        <h1 class="main-title">Gruppdiskussioner om AI</h1>
+        <p class="subtitle">Utforska AI:s komplexa frågor tillsammans</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-users"></i>
+          Diskussionsämnen
+        </h2>
+        <p class="text-block">
+          Dessa diskussionsämnen är utformade för att stimulera kritiskt tänkande och ge er möjlighet att utforska AI:s bredare implikationer. Arbeta i mindre grupper och dela era tankar och perspektiv med varandra. Det finns inga 
+

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-tekniker: Datorseende</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      .page-container {
+        max-width: 1280px;
+        width: 100%;
+        min-height: 100vh;
+        margin: 0 auto;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        flex-direction: column;
+        font-family: 'Inter', sans-serif;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        padding: 40px 20px;
+      }
+      @media (max-width: 768px) {
+        .page-container {
+          padding: 20px 15px;
+        }
+      }
+      @media (max-width: 480px) {
+        .page-container {
+          padding: 15px 10px;
+        }
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .main-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+      .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.8;
+      }
+      .content-section {
+        background: rgba(255,255,255,0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+        margin-bottom: 1.5rem;
+      }
+      .section-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #ffd700;
+      }
+      .text-block {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+      .example-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      .example-card {
+        background: rgba(255,255,255,0.15);
+        border-radius: 15px;
+        padding: 1.5rem;
+        border: 1px solid rgba(255,255,255,0.2);
+      }
+      .example-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        color: #4ecdc4;
+      }
+      .example-desc {
+        font-size: 1rem;
+        line-height: 1.5;
+        opacity: 0.9;
+      }
+      .questions-section {
+        background: rgba(255,255,255,0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+      }
+      .questions-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #8360c3;
+      }
+      .question-item {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+      .question-item::before {
+        content: '\2022'; /* Bullet point */
+        color: #8360c3;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1.5em;
+        position: absolute;
+      }
+      /* --- Back Button CSS --- */
+      .back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: rgba(0,0,0,0.3); /* Darker for better visibility on various backgrounds */
+        border: 1px solid rgba(255,255,255,0.3);
+        border-radius: 50px;
+        padding: 10px 15px; /* Slightly smaller padding */
+        font-size: 0.9rem; /* Slightly smaller font */
+        color: white;
+        text-decoration: none;
+        backdrop-filter: blur(8px); /* Slightly less blur */
+        transition: all 0.3s ease;
+        z-index: 1000; /* Ensure it's on top */
+        display: flex; /* For icon alignment */
+        align-items: center; /* For icon alignment */
+      }
+      
+      .back-button:hover {
+        background: rgba(0,0,0,0.5); /* Darker hover */
+        transform: translateX(-3px); /* Slightly less transform */
+      }
+      .back-button i {
+        margin-right: 8px; /* Space between icon and text */
+      }
+    </style>
+  </head>
+  <body>
+    <a href="ai_techniques.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>Tillbaka
+    </a>
+    <div class="page-container">
+      <div class="header">
+        <h1 class="main-title">AI-tekniker: Datorseende</h1>
+        <p class="subtitle">Att lära maskiner att 'se' och förstå världen</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-eye"></i>
+          Vad är Datorseende inom AI?
+        </h2>
+        <p class="text-block">
+          Datorseende (Computer Vision) är ett område inom artificiell intelligens som gör det möjligt för datorer och system att härleda meningsfull information från digitala bilder, videor och andra visuella ingångar. Målet är att efterlikna, och i vissa fall överträffa, den mänskliga förmågan att se och förstå visuella data. Detta innefattar allt från att känna igen objekt och ansikten till att tolka komplexa scener och förstå rörelse.
+        </p>
+        <p class="text-block">
+          Genom att använda avancerade algoritmer och neurala nätverk kan system för datorseende analysera pixlar och mönster för att identifiera objekt, klassificera bilder, spåra rörelser och till och med generera nya bilder. Det är en teknik som ligger till grund för många av de AI-applikationer vi ser idag, från självkörande bilar till ansiktsigenkänning i våra smartphones.
+        </p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-lightbulb"></i>
+          Hur Fungerar Det?
+        </h2>
+        <p class="text-block">
+          Datorseende involverar en komplex process som ofta kan delas in i följande steg:
+        </p>
+        <div class="example-grid">
+          <div class="example-card">
+            <div class="example-title">1. Bildinsamling</div>
+            <div class="example-desc">Bilder eller videor samlas in från kameror, sensorer eller befintliga databaser.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">2. Förbehandling</div>
+            <div class="example-desc">Bilderna rengörs och förbättras (t.ex. brusreducering, kontrastjustering) för att underlätta analysen.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">3. Feature Extraction</div>
+            <div class="example-desc">Viktiga egenskaper (features) som kanter, hörn, texturer och färger extraheras från bilden.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">4. Objektdetektering & Igenkänning</div>
+            <div class="example-desc">AI-modeller, ofta djupa neurala nätverk, tränas för att identifiera och klassificera objekt eller mönster baserat på de extraherade egenskaperna.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">5. Tolkning & Beslut</div>
+            <div class="example-desc">Systemet tolkar den visuella informationen och fattar beslut eller utför handlingar baserat på sin förståelse.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-cogs"></i>
+          Exempel på Datorseende inom AI
+        </h2>
+        <div class="example-grid">
+          <div class="example-card">
+            <div class="example-title">Ansiktsigenkänning</div>
+            <div class="example-desc">Används för säkerhet, upplåsning av telefoner och taggning av personer i foton.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Självkörande Bilar</div>
+            <div class="example-desc">Tolkar vägskyltar, trafikljus, fotgängare och andra fordon för säker navigering.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Medicinsk Bildanalys</div>
+            <div class="example-desc">Hjälper läkare att upptäcka sjukdomar som cancer från röntgenbilder och MR-skanningar.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Kvalitetskontroll i Industri</div>
+            <div class="example-desc">Automatiserad inspektion av produkter för att hitta defekter på löpande band.</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="questions-section">
+        <h2 class="questions-title">
+          <i class="fas fa-question-circle"></i>
+          Frågor att Fundera Över
+        </h2>
+        <ul>
+          <li class="question-item">Vilka etiska problem kan uppstå med utbredd användning av ansiktsigenkänningsteknik?</li>
+          <li class="question-item">Hur kan datorseende bidra till att förbättra säkerheten i offentliga miljöer, och vilka risker finns det med detta?</li>
+          <li class="question-item">Hur kan vi säkerställa att AI-system för datorseende är rättvisa och inte diskriminerar baserat på t.ex. hudfärg eller kön?</li>
+          <li class="question-item">Vilka nya yrken kan uppstå, och vilka kan försvinna, i takt med att datorseende blir mer avancerat?</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+

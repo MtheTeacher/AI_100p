@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-tekniker: Prediktion</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+      .page-container {
+        max-width: 1280px;
+        width: 100%;
+        min-height: 100vh;
+        margin: 0 auto;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        flex-direction: column;
+        font-family: 'Inter', sans-serif;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        padding: 40px 20px;
+      }
+      @media (max-width: 768px) {
+        .page-container {
+          padding: 20px 15px;
+        }
+      }
+      @media (max-width: 480px) {
+        .page-container {
+          padding: 15px 10px;
+        }
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .main-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+      .subtitle {
+        font-size: 1.2rem;
+        opacity: 0.8;
+      }
+      .content-section {
+        background: rgba(255,255,255,0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+        margin-bottom: 1.5rem;
+      }
+      .section-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #ffd700;
+      }
+      .text-block {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+      .example-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      .example-card {
+        background: rgba(255,255,255,0.15);
+        border-radius: 15px;
+        padding: 1.5rem;
+        border: 1px solid rgba(255,255,255,0.2);
+      }
+      .example-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        color: #4ecdc4;
+      }
+      .example-desc {
+        font-size: 1rem;
+        line-height: 1.5;
+        opacity: 0.9;
+      }
+      .questions-section {
+        background: rgba(255,255,255,0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+      }
+      .questions-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #8360c3;
+      }
+      .question-item {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+      .question-item::before {
+        content: '\2022'; /* Bullet point */
+        color: #8360c3;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1.5em;
+        position: absolute;
+      }
+      /* --- Back Button CSS --- */
+      .back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: rgba(0,0,0,0.3); /* Darker for better visibility on various backgrounds */
+        border: 1px solid rgba(255,255,255,0.3);
+        border-radius: 50px;
+        padding: 10px 15px; /* Slightly smaller padding */
+        font-size: 0.9rem; /* Slightly smaller font */
+        color: white;
+        text-decoration: none;
+        backdrop-filter: blur(8px); /* Slightly less blur */
+        transition: all 0.3s ease;
+        z-index: 1000; /* Ensure it's on top */
+        display: flex; /* For icon alignment */
+        align-items: center; /* For icon alignment */
+      }
+      
+      .back-button:hover {
+        background: rgba(0,0,0,0.5); /* Darker hover */
+        transform: translateX(-3px); /* Slightly less transform */
+      }
+      .back-button i {
+        margin-right: 8px; /* Space between icon and text */
+      }
+    </style>
+  </head>
+  <body>
+    <a href="ai_techniques.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>Tillbaka
+    </a>
+    <div class="page-container">
+      <div class="header">
+        <h1 class="main-title">AI-tekniker: Prediktion</h1>
+        <p class="subtitle">Att förutsäga framtiden med data</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-chart-line"></i>
+          Vad är Prediktion inom AI?
+        </h2>
+        <p class="text-block">
+          Prediktion inom AI handlar om att använda algoritmer och historisk data för att göra kvalificerade gissningar om framtida händelser eller trender. Tänk på det som att titta på tidigare mönster för att förstå vad som sannolikt kommer att hända härnäst. Detta används inom en mängd olika områden, från att förutsäga aktiekurser till att gissa vilken film du kommer att gilla härnäst på Netflix.
+        </p>
+        <p class="text-block">
+          Kärnan i AI-prediktion är att hitta samband och mönster i stora datamängder som inte är uppenbara för en människa. Genom att analysera dessa mönster kan AI-modeller bygga en förståelse för hur olika faktorer påverkar varandra och använda denna förståelse för att göra prognoser. Ju mer relevant och högkvalitativ data AI-modellen tränas på, desto mer exakta blir vanligtvis dess prediktioner.
+        </p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-lightbulb"></i>
+          Hur Fungerar Det?
+        </h2>
+        <p class="text-block">
+          Processen för AI-prediktion involverar vanligtvis flera steg:
+        </p>
+        <div class="example-grid">
+          <div class="example-card">
+            <div class="example-title">1. Datainsamling</div>
+            <div class="example-desc">Samla in historisk data som är relevant för det du vill förutsäga. Till exempel, för att förutsäga väder, samlar du in data om tidigare temperaturer, lufttryck, vindhastighet, etc.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">2. Dataanalys & Förberedelse</div>
+            <div class="example-desc">Rensa och förbereda datan. Detta kan innebära att hantera saknade värden, identifiera och hantera avvikelser, och omvandla data till ett format som AI-modellen kan förstå.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">3. Modellval & Träning</div>
+            <div class="example-desc">Välja en lämplig AI-algoritm (t.ex. regressionsanalys, neurala nätverk) och träna modellen på den historiska datan. Modellen lär sig att identifiera mönster och samband.</div>
+          </div>
+          <div class="example_card">
+            <div class="example-title">4. Prediktion</div>
+            <div class="example-desc">Använda den tränade modellen för att göra förutsägelser om framtida data.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">5. Utvärdering & Förfining</div>
+            <div class="example-desc">Utvärdera hur bra modellens prediktioner stämmer överens med verkliga utfall och justera modellen vid behov för att förbättra noggrannheten.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-cogs"></i>
+          Exempel på Prediktion inom AI
+        </h2>
+        <div class="example-grid">
+          <div class="example-card">
+            <div class="example-title">Väderprognoser</div>
+            <div class="example-desc">AI-modeller analyserar historisk väderdata och realtidsinformation för att förutsäga framtida väderförhållanden.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Aktiemarknaden</div>
+            <div class="example-desc">AI används för att analysera marknadstrender och historiska data för att förutsäga framtida aktiekurser.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Kundbeteende</div>
+            <div class="example-desc">E-handelsplattformar använder AI för att förutsäga vilka produkter kunder sannolikt kommer att köpa baserat på deras tidigare beteende.</div>
+          </div>
+           <div class="example-card">
+            <div class="example-title">Sjukdomsutbrott</div>
+            <div class="example-desc">AI kan analysera data från olika källor för att förutsäga var och när nästa sjukdomsutbrott kan inträffa.</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="questions-section">
+        <h2 class="questions-title">
+          <i class="fas fa-question-circle"></i>
+          Frågor att Fundera Över
+        </h2>
+        <ul>
+          <li class="question-item">Vilka är de största utmaningarna med att göra exakta prediktioner med AI?</li>
+          <li class="question-item">Hur kan felaktiga prediktioner påverka samhället eller individer?</li>
+          <li class="question-item">Vilka etiska överväganden finns kring användningen av AI för att förutsäga individers beteende?</li>
+          <li class="question-item">Hur kan vi säkerställa att AI-modeller som används för prediktion är transparenta och rättvisa?</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+
