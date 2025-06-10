@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI hos Google Maps</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      .page-container {
+        width: 1280px;
+        min-height: 720px;
+        background: linear-gradient(135deg, #4285F4 0%, #34A853 100%);
+        display: flex;
+        flex-direction: column;
+        font-family: 'Inter', sans-serif;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        padding: 40px;
+      }
+      
+      .header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      
+      .main-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      }
+      
+      .subtitle {
+        font-size: 1.5rem;
+        opacity: 0.9;
+      }
+      
+      .content-section {
+        background: rgba(255,255,255,0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+        margin-bottom: 1.5rem;
+      }
+      
+      .section-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #FBBC05;
+      }
+      
+      .text-block {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+      
+      .example-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      
+      .example-card {
+        background: rgba(255,255,255,0.15);
+        border-radius: 15px;
+        padding: 1.5rem;
+        border: 1px solid rgba(255,255,255,0.2);
+      }
+      
+      .example-title {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+        color: #4285F4;
+      }
+      
+      .example-desc {
+        font-size: 1rem;
+        line-height: 1.5;
+        opacity: 0.9;
+      }
+      
+      .youtube-section {
+        background: rgba(255,255,255,0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+        margin-bottom: 1.5rem;
+      }
+      
+      .youtube-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #EA4335;
+      }
+      
+      .video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+      
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      
+      .questions-section {
+        background: rgba(255,255,255,0.1);
+        border-radius: 20px;
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.2);
+      }
+      
+      .questions-title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #8360c3;
+      }
+      
+      .question-item {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+      
+      .question-item::before {
+        content: '\2022'; /* Bullet point */
+        color: #8360c3;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1.5em;
+        position: absolute;
+      }
+      
+      .back-button {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: rgba(255,255,255,0.2);
+        padding: 0.75rem 1.5rem;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: white;
+        transition: background 0.3s ease;
+      }
+      
+      .back-button:hover {
+        background: rgba(255,255,255,0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-container">
+      <a href="practical_applications.html" class="back-button">
+        <i class="fas fa-arrow-left mr-2"></i> Tillbaka
+      </a>
+      
+      <div class="header">
+        <h1 class="main-title">AI hos Google Maps</h1>
+        <p class="subtitle">Från Trafikprognoser till Immersiva Upplevelser</p>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-map-marked-alt"></i>
+          Nuvarande Tillämpningar: Smarta Rutter och Lokal Upptäckt
+        </h2>
+        <p class="text-block">
+          Google Maps är en av de mest använda AI-drivna applikationerna i vardagen. AI-algoritmer analyserar enorma mängder realtidsdata från trafikflöden, väderförhållanden, vägarbeten och användarrapporter för att beräkna de snabbaste och mest effektiva rutterna. Detta inkluderar att förutsäga trafikstockningar och föreslå alternativa vägar. Utöver navigering använder Google Maps AI för att:
+        </p>
+        <div class="example-grid">
+          <div class="example-card">
+            <div class="example-title">Trafikprognoser</div>
+            <div class="example-desc">Förutsäger trafikmönster baserat på historisk data och realtidsinformation.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Lokal Sökning & Rekommendationer</div>
+            <div class="example-desc">Hjälper användare att hitta restauranger, butiker och sevärdheter baserat på preferenser och plats.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Street View & Bildigenkänning</div>
+            <div class="example-desc">AI bearbetar miljarder bilder för att skapa detaljerade kartor och identifiera byggnader, vägskyltar m.m.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Röststyrning & Naturligt Språk</div>
+            <div class="example-desc">Förstår talade instruktioner och frågor för en handsfree-upplevelse.</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="content-section">
+        <h2 class="section-title">
+          <i class="fas fa-globe-americas"></i>
+          Framtida Möjligheter: Utökad Verklighet och Multimodal Navigering
+        </h2>
+        <p class="text-block">
+          Framtiden för AI hos Google Maps är inriktad på att skapa ännu mer intuitiva och immersiva navigeringsupplevelser:
+        </p>
+        <div class="example-grid">
+          <div class="example-card">
+            <div class="example-title">AR-Navigering</div>
+            <div class="example-desc">Använder utökad verklighet för att lägga digitala vägbeskrivningar direkt på kamerabilden av den verkliga världen.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Prediktiv Mobilitet</div>
+            <div class="example-desc">AI förutsäger dina transportbehov och föreslår proaktivt rutter och transportmedel.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Multimodal Reseplanering</div>
+            <div class="example-desc">Integrerar sömlöst olika transportslag (gång, cykel, bil, kollektivtrafik) i en enda ruttplan.</div>
+          </div>
+          <div class="example-card">
+            <div class="example-title">Personliga Kartor</div>
+            <div class="example-desc">Kartor som anpassas dynamiskt baserat på användarens intressen, tillgänglighet och tidigare beteende.</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="youtube-section">
+        <h2 class="youtube-title">
+          <i class="fab fa-youtube"></i>
+          Se Mer om AI hos Google Maps
+        </h2>
+        <div class="example-grid">
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/P-2_2g_QEPQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/j1_f6Q0r25w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      
+      <div class="questions-section">
+        <h2 class="questions-title">
+          <i class="fas fa-question-circle"></i>
+          Frågor att Fundera Över
+        </h2>
+        <ul>
+          <li class="question-item">Hur påverkar Google Maps AI-drivna ruttoptimeringar trafikflödena i städer och vårt val av transportmedel?</li>
+          <li class="question-item">Vilka integritetsfrågor uppstår när Google Maps samlar in och analyserar stora mängder platsdata från användare?</li>
+          <li class="question-item">Kan AI-drivna karttjänster leda till en ökad beroende av teknik för navigering och en minskad förmåga att orientera sig själv?</li>
+          <li class="question-item">Hur kan Google Maps bidra till hållbar stadsutveckling genom AI-driven transportplanering?</li>
+          <li class="question-item">Vilka är de potentiella riskerna med att förlita sig på AI för att fatta beslut om våra resor, särskilt i nödsituationer?</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+
