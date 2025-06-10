@@ -1,0 +1,403 @@
+Om ämnet artificiell intelligens
+Artificiell intelligens (AI) är en högaktuell teknik som i allt större utsträckning
+påverkar oss och vårt samhälle. Vikten av källkritisk granskning ökar när
+informationsflödet både kan styras av AI och ges ett AI-genererat innehåll.
+Sociala medier, handel, infrastruktur och kontakter med samhällsinstitutioner
+är exempel på områden där AI på olika sätt används och därmed påverkar våra
+liv. Kunskaper om AI är viktiga för att kunna deltat i många delar av
+samhällslivet och för att förstå den tekniska utvecklingen. Dagens elever
+behöver därför ges möjlighet att lära sig om AI som samhällsmedborgare, för
+fortsatta studier och för kommande arbetsliv.
+
+Ämnets karaktär och plats i programstrukturen
+Ämnet artificiell intelligens är till sin karaktär tvärvetenskapligt. Innehållet i
+ämnet kan delas in i tre delar; en teknisk, en samhällsvetenskaplig och en
+tillämpad del. Undervisningen ska behandla kunskaper om AI och dess
+funktionssätt, primära beståndsdelar och uppbyggnad. Undervisningen ska
+också behandla AI-utvecklingen ur ett samhällsperspektiv och utforska vilka
+konsekvenser AI kan ha för det dagliga livet. Dessutom ska eleverna få
+använda AI i problemlösning tillämpad på elevens studieinriktning, deras
+intresse eller andra önskemål.
+Artificiell intelligens ingår i programfördjupningen på de flesta nationella
+program. Eleverna kan också välja ämnet som individuellt val. Ämnet kan alltså
+läsas av alla elever oavsett programval. Ämnet kan med fördel undervisas av
+flera lärare med olika kunskaper, så att olika kompetenser kompletterar
+varandra. Beroende på när ämnet erbjuds under studietiden, och elevernas
+förkunskaper i matematik, kan undervisningen behöva ta upp vissa
+matematiska begrepp. Det centrala innehållet kan till stora delar anpassas
+utifrån elevernas studieval, intressen och förkunskaper. Ämnesplanen är
+skriven för att kunna använda olika typer av produkter och tjänster utan att
+vara bunden till specifika verktyg.
+
+Skolverket 2024
+2024
+
+1 (9)
+
+Ämnesplanen
+Här följer kommentarer till ämnets syfte samt det centrala innehållet för kursen
+artificiell intelligens 1. Därefter följer övergripande kommentarer för kursen
+artificiell intelligens 2 och på vilket sätt progressionen i ämnet är uppbyggd.
+Kommentarerna är skrivna för dig som är lärare. Ibland ges olika exempel på
+tekniska begrepp, metoder eller användningsområden. Dessa finns här för att
+ange vilken nivå som är rimlig för gymnasieämnet artificiell intelligens.
+
+Ämnets syfte
+Artificiell intelligens är i hög grad en socioteknisk innovation. Den tekniska
+utvecklingen av AI flätas samman med samhället på olika nivåer. Detta samspel
+behöver därför ständigt uppmärksammas och vara en återkommande reflektion
+i undervisningen. Utvecklingen av AI innebär både möjligheter och risker.
+Genom att stärka elevernas kunskaper om AI, vad som styr utvecklingen och
+hur tekniken tillämpas medverkar undervisning i AI till att balansera farhågor
+och rusta eleverna till kloka avvägningar och val.
+Ämnet möjliggör att mer eller mindre programmering används i undervisningen, för att konkretisera algoritmer, utforska olika tekniker för AI eller
+för att lösa problem. Urval, presentation och tillämpning av algoritmer kan
+anpassas utifrån elevernas matematikkunskaper. De elever som har kunskaper
+i kodning kan använda och fördjupa dessa i ämnet. För elever som saknar
+kunskaper och vana i textbaserad programmering kan blockprogrammering
+vara ett alternativ. Undervisningen kan också utgå ifrån färdiga kodexempel där
+valda delar kompletteras eller modifieras. Programmering kan ske i onlinemiljöer utan krav på att programvaror installeras lokalt.
+Den tillämpade delen i ämnet kan utgå ifrån elevernas studieval eller intressen
+och anpassas till deras kunskaper i programmering och andra ämneskunskaper.
+Kopplingen mellan tekniken och påverkan på individ och samhälle blir därmed
+en viktig del i undervisningen.
+De delar ur syftestexten som ska vara underlag för lärarens bedömning
+återfinns i de fem mål som avslutar denna del av ämnesplanen.
+
+Centralt innehåll, artificiell intelligens 1
+Det centrala innehållet i ämnet återfinns under tre rubriker; artificiell intelligens,
+praktisk användning av AI och förhållningssätt till AI. Rubrikerna har framför
+allt kommit till för att underlätta läsningen av ämnesplanen, de är inte avsedda
+för att dela in undervisningen i separata delar. Innehållet går många gånger i
+vartannat och löper parallellt genom hela kursen. Kommentarerna av det
+centrala innehållet följer under dessa rubriker och syftar till att utveckla
+innehållet och ge exempel på vad som kan tas upp. De kursiverade raderna är
+centrala innehållspunkter, strecksatser, i ämnesplanen.
+
+Skolverket 2024
+2024
+
+2 (9)
+
+Artificiell intelligens
+
+Under denna rubrik finns sex centrala innehållspunkter som ska ge möjlighet
+att ge undervisning vad AI är, hur den används och vad den kan användas till.
+-
+
+Definition av AI samt centrala begrepp inom området
+
+Det finns ingen gemensam och enhällig definition av AI. Undervisningen kan
+därför ta upp några olika definitioner av artificiell intelligens, från såväl
+nationella som internationella instanser och organisationer.
+Artificiell intelligens omfattar ett stort område. Det bör också avspeglas i
+undervisningen så att den inte begränsas till att hantera en enskild form av AI,
+såsom generativ AI eller mänskliga robotar.
+Även om AI har en kort historik jämfört med mycket annan teknik, kan ett
+historiskt perspektiv om hur AI vuxit fram ändå vara angeläget att lyfta. Här
+kan också finnas plats för historiska definitioner av AI, till exempel Turingtestet
+och expertsystem, och att lyfta historiska och aktuella händelser som fått
+genomslag i massmedia.
+Undervisningen kan även ge möjlighet att undersöka hur synen på AI förändras
+över tid, liksom gränsen för vad som kallas AI. Troligen kan eleverna identifiera
+situationer som innehåller AI utan att tänka på det, till exempel rekommendationssystem vid e-handel och streamingtjänster.
+Genom att diskutera tekniker som är viktiga inom AI går det också att närma
+sig vad AI är, till exempel genom begreppen robotik och naturlig språkbehandling.
+-
+
+Vikten av data, datakvalitet för AI och val av data.
+
+Data är grundläggande för AI. Några avgörande faktorer för framgångsrika AIsystem är val av data, dess kvalitet och kostnaden för att ta fram eller få tillgång
+till den data som behövs. AI-modellens förmåga att ge korrekta svar är
+beroende av både kvantitet och kvalitet för att lära sig mönster och fatta beslut.
+Urvalet av data är avgörande för kvaliteten och behöver därför vara balanserad,
+representativ och opartisk, dvs inte innehålla bias. Här finns intressanta etiska
+frågor att samtala om i klassrummet. Vilka effekter får fördomsfulla data för
+oss som mottagare av budskap och information?
+Även situationer där andra urval är önskvärda kan förekomma. Sällsynta
+händelser, som olyckor eller ovanliga sjukdomar, är exempel där representativa
+data inte innehåller tillräckligt med exempel för att kunna göra en meningsfull
+analys. Då kan data behöva rensas och förberedas och bristfälliga, felaktiga eller
+inkonsekventa värden hanteras.
+
+Skolverket 2024
+2024
+
+3 (9)
+
+-
+
+Drivkrafter bakom utvecklingen av AI.
+
+Utvecklingen av AI möjliggörs av kraftfulla datorer och tillgång till stora
+datamängder. Detta gör det möjligt att träna komplexa modeller och algoritmer.
+Att förstå vad som driver utvecklingen av AI kan hjälpa eleverna att förstå
+varför AI utvecklas och i vilken riktning.
+Samhällets demografi och förändrad konsumtion är några faktorer som driver
+på behovet av ökad automatisering. Viljan hos företag och organisationer att
+investera i AI-forskning och utveckling driver också fram innovation inom
+området. Efterfrågan på ny teknik utifrån säkerhet och arbetsmiljö har blivit
+större och framsteg inom bildigenkänning och förståelse av naturligt språk har
+ökat antalet tillämpningar för AI.
+För eleverna kan det även vara intressant att diskutera vilka effekter
+användningen av AI-teknik får. Hur påverkar övervakningsteknologi eller AItillverkad konst vår integritet respektive immateriella rättigheter? Dessa
+kopplingar kan göras löpande när olika tekniker hanteras, och ur flera aspekter,
+exempelvis sociala, ekonomiska eller etiska. Genom att samtala om bland annat
+risker, människosyn och kommersiella intressen kan kritiska perspektiv lyftas.
+-
+
+Översikt över användningen av AI, däribland prediktion, robotik, vision och
+generativ AI samt olika tekniker och metoder som ligger bakom dessa.
+
+Användningen av AI är omfattande och ingår bland annat i sökmotorer,
+bildigenkänning och översättningstjänster. För dessa finns olika tekniker och
+metoder och de som anges i strecksatsen ovan ska ingå i undervisningen. I
+samband med detta kan även stora språkmodeller tas upp i undervisningen,
+dels för att förklara vad de är och hur de fungerar på en övergripande nivå, dels
+för att belysa deras svagheter.
+-
+
+Översikt av tekniker för AI, däribland sökning, klassificering och
+objektigenkänning.
+
+Här kan olika tekniker för AI presenteras på en konceptuell och övergripande
+nivå, men det finns också utrymme för fördjupning inom någon eller några
+tekniker som kan studeras mer i detalj. De AI-tekniker som skrivs fram i
+strecksatsen ska ingå i undervisningen. Utöver dessa kan andra tas upp i
+undervisningen, som till exempel textklassificering, rekommendationssystem,
+ruttplanering och spelagenter.
+-
+
+Översikt av metoder och algoritmer inom AI, däribland beslutsträd, regression samt
+övervakat och oövervakat lärande.
+
+Metoder och algoritmer är grundläggande för att lösa problem med hjälp av AI.
+De begrepp som anges i strecksatsen ovan ska tas upp i undervisningen.
+Beroende på elevernas förkunskaper i matematik kan läraren välja några av
+
+Skolverket 2024
+2024
+
+4 (9)
+
+följande exempel på metoder: naiva bayesianska klassificerare, k-närmastegrannar-algoritmen eller linjär regression.
+Praktisk användning av AI
+
+Under denna rubrik finns fyra centrala innehållspunkter som ska ge möjlighet
+att ge undervisning i praktisk användningen av AI.
+-
+
+Översikt över processen för problemlösning med AI.
+
+Vid problemlösning med AI är ett systematiskt arbetssätt och en väl beprövad
+process centralt. I undervisningen finns möjlighet att relatera till tidigare
+situationer då eleverna mött och arbetat med problemlösning inom till exempel
+design eller matematik. Några steg som ingår i processen, och kan beröras, är
+problemformulering, datainsamling och modellval. Efter utvärdering av
+resultatet kan det också finnas behov förbättringar. Som en avslutande del i
+processen ingår bland annat implementering och driftsättning.
+-
+
+Enklare typ av problemlösning med hjälp av AI, till exempel klassificering,
+objektigenkänning, prediktion, tolkning och bearbetning av naturligt språk (NLP),
+enklare maskininlärning och användning av spelagent.
+
+Eleverna ska ges möjlighet att lösa enklare problem med hjälp av AI. De
+begrepp som anges i strecksatsen är exempel, men läraren kan välja andra
+begrepp. Denna del kan genomföras med hjälp av användning av färdiga
+programmeringsexempel, egen kodning med hjälp av befintliga programmeringsbibliotek eller tillgängliga tjänster och plattformar för AI.
+-
+
+Principer för, och tillämpningar av, vanliga tekniker inom AI, däribland
+maskininlärning och robotik.
+
+Maskininlärning och robotik är två principer och tillämpningar inom AI som
+ska ingå i undervisningen, men fler kan presenteras. Några exempel som kan
+lyftas är hur AI kan eliminera riskfyllda arbetsmoment, hur generativ AI
+förändrar åtkomst av information, när det är en fördel att implementera AI eller
+när själva AI:n kan bli en risk.
+-
+
+Metoder för enklare träning av AI.
+
+Undervisningen ger eleverna möjlighet att träna enklare AI med några olika
+metoder. Grundläggande begrepp att utgå ifrån kan vara tränings- och testdata
+samt märkt och omärkt data. Genom att låta eleverna dela upp data i träningsoch testmängder kan de därefter diskutera hur man kan använda träningsdata
+för att anpassa sin modell och sina testdata för att utvärdera datans prestanda.
+Här finns också möjlighet att diskutera hur AI-modeller kan tränas på olika sätt,
+till exempel övervakat och oövervakat lärande eller förstärkningsinlärning samt
+hur dessa kan kombineras.
+
+Skolverket 2024
+2024
+
+5 (9)
+
+Förhållningssätt till AI
+
+Under denna rubrik finns fem centrala innehållspunkter som ska ge möjlighet
+att ge undervisning om samhällsvetenskapliga aspekter av AI.
+-
+
+Jämförelse mellan hur enklare lösningar med AI fungerar och hur en människa
+löser samma problem.
+
+Förutom att diskutera olika sätt där AI och människor löser problem på
+liknande eller helt olika sätt, kan undervisningen även ta upp vilka konsekvenser
+detta kan få. Några förslag på likheter mellan hur AI och människor löser
+samma problem skulle kunna vara dataanvändning, mönsterigenkänning,
+användning av algoritmer och verktyg. Förslag på skillnader som kan lyftas i
+undervisningen är hastighet, kreativitet och etiska överväganden.
+-
+
+Några situationer där AI är överlägsen människan och tvärtom.
+
+Det finns en rad situationer då AI är överlägsen människan. Några exempel
+som kan tas upp i undervisningen är snabb dataanalys, repetitiva uppgifter och
+självkörande fordon. AI kan bearbeta stora mängder data på kort tid, vilket är
+användbart inom medicinsk diagnostik, finansanalyser och klimatmodellering.
+AI kan också utföra monotona och repetitiva arbetsuppgifter utan att tröttna,
+till exempel sortera och kategorisera stora datamängder. Dessutom kan AI köra
+fordon mer exakt och reagera snabbare än människor.
+Den motsatta situationen, då människan är överlägsen AI, kan vara vid etiska
+beslut och social interaktion eller vid tillfällen som kräver kreativitet och
+intuition. Människor kan göra avvägningar baserat på moraliska och etiska
+överväganden, medan AI agerar enligt programmerade regler. Dessutom har
+människor förmågan att förstå känslor, bygga relationer och kommunicera på
+ett sätt som AI inte kan. Ett exempel på detta är kroppsspråk. Människor är
+också bättre på att tänka kreativt, lösa komplexa problem och använda
+intuition.
+Genom fallstudier, där eleverna får analysera verkliga exempel, kan
+undervisningen belysa tillfällen där AI har överträffat människor eller vice
+versa. Genom att eleverna får genomföra projekt där de skapar egna AIlösningar och jämför dem med mänskliga metoder, kan ytterligare situationer
+belysas. Eleverna bör även ges möjlighet att reflektera över och samtala om när
+AI är ett lämpligt val och när mänskligt omdöme är nödvändigt. I sådana samtal
+är det angeläget att även diskutera och kritiskt reflektera över konsekvenser av
+att låta AI respektive människan fatta beslut.
+Ytterligare exempel på vad som kan lyftas i undervisningen är situationer där
+AI uppenbart gör fel eller inte förstår, samt AI i förhållande till vad som är
+enkelt respektive svårt att automatisera. I detta sammanhang kan Moravecs
+paradox diskuteras.
+
+Skolverket 2024
+2024
+
+6 (9)
+
+-
+
+Normer samt lagar och andra bestämmelser som gäller AI och dess användning.
+
+Lagstiftningen som gäller AI sker samtidigt med AI-utvecklingen. De lagar och
+bestämmelser och de normer och principer som finns behöver eleverna känna
+till. Vissa är nationella, andra internationella. De bestämmelser som gäller inom
+EU kan vara av särskilt intresse att belysa. På samma sätt som AI påverkar
+lagstiftningen har även juridiken och rättsliga frågor en påverkan på AI, bland
+annat när det gäller upphovsrätt för genererat material och ansvarsfrågor.
+-
+
+Etiska dilemman med användandet av AI, däribland transparens.
+
+Användning av AI, och kanske även själva tekniken, väcker ett antal etiska
+frågor. Några av dessa är breda och svårare att fånga, därför kan ett sätt att
+närma sig dem vara att ta upp mer specifika frågeställningar som sedan
+generaliseras. Som strecksatsen anger är transparens en aspekt som ska tas upp
+i undervisningen, medan andra aspekter av etiska dilemman väljs utifrån
+elevgrupp, utbildningens inriktning och andra omständigheter.
+Några exempel på etiska frågeställningar som kan tas upp är bristen på
+transparens, AI som svart låda och vem som bär ansvar när AI beter sig på ett
+sätt som inte kunnat förutsägas. I vilka situationer är förklarbarhet viktigare än
+prestanda i ett AI-system och omvänt? Ett annat område som är värt att
+diskutera är upphovsrätt. Vilken data är det etiskt försvarbart att träna AImodeller på? Hur ställer vi oss till AI-skapad media som härmar särskilda
+konstnärer? Vem, om någon, borde ses som upphovsperson för AI-skapad
+media? Ytterligare ett intressant område att samtala om är bias och fördomar.
+Det kan finnas risk att vissa grupper gynnas eller missgynnas utifrån till exempel
+kön, ålder eller hudfärg. Samtidigt finns även bias och fördomar hos
+människor, och med AI-modeller finns möjligheter att systematiskt undersöka
+och motverka bias. Hur bör man se på att använda AI-stöd där fördomar hos
+både människor och AI sannolikt påverkar beslut?
+-
+
+Demokratiska, sociala, ekonomiska, miljömässiga och säkerhetsmässiga
+möjligheter och risker med AI-användning samt dess konsekvenser för samhället.
+
+Möjligheter och risker med AI samt kopplingen till demokrati och hållbarhet
+är minst sagt stort. Flertalet tekniska AI-lösningar kan diskuteras i ljuset av
+dessa aspekter. De perspektiv som skrivs fram i strecksatsen ska belysas i
+undervisningen och ge eleverna tillfällen till reflektion och diskussion. Några
+exempel på möjligheter och risker följer här.
+Tillgängligheten till myndigheter har på flera sätt ökat genom att enskilda
+medborgare kan får svar på sina frågor snabbare via hemsidor och
+chatfunktioner. Samtidigt utestängs grupper som av olika orsaker inte kan
+använda eller ta del av digital kommunikation.
+
+Skolverket 2024
+2024
+
+7 (9)
+
+Informationsflödet påverkas genom ökade möjligheter till stärkt
+nyhetsproduktion, dataanalys och tillgång till information. Samtidigt främjar
+algoritmerna reaktioner som ger större utrymme för sensationsnyheter, men
+också desinformation. Hur påverkas demokratin av trollfabriker och alternativa
+fakta? Vilka konsekvenser har det för det demokratiska samtalet? Och hur kan
+vi navigera i ett förändrat informationslandskap? Flera beslut fattas idag helt
+eller delvis av AI. Det kan handla om låneansökningar och villkor för räntor
+och återbetalning, beslut om bidrag eller sortering vid ansökan om jobb. Beslut
+som får både sociala och ekonomiska konsekvenser för den enskilda
+medborgaren.
+Inom hälso- och sjukvård har användningen av AI inneburit snabbare och
+många gånger säkrare diagnostik. Robotar kan på sikt överta delar av
+hemsjukvården. Men vilka etiska frågor ställer det? Hur stor är risken för
+feldiagnostik och kan en robot ersätta mänsklig kontakt?
+På miljöområdet används AI på flera sätt för att få säkra och snabba
+sammanställningar, modeller och analyser. Automatisk skadebedömning,
+energibesparingar och realtidsövervakning av klimatsystem är några exempel
+där AI är en stor tillgång för välgrundade beslut. Samtidigt är användningen av
+AI i sig energikrävande och lagring av data förutsätter stora serverhallar.
+Utöver hållbarhetsaspekterna finns en rad säkerhetsfrågor kopplat till AI.
+Ökade möjligheter till brottsförebyggande arbete, till exempel för att förebygga
+bedrägerier, väcker samtidigt frågor om personlig integritet. Olika lösningar för
+att öka säkerheten diskuteras bland forskare, till exempel genom inbyggda
+säkerhetsmekanismer i öppet tillgängliga AI-verktyg och vattenmärkning av
+AI-genererat material.
+En angelägen fråga är hur vår syn på kunskap påverkas av AI. Vad är och vad
+blir viktigt att kunna? Vad behöver vi själva kunna och vad kan vi lämna över
+till maskiner? Även om maskiner kan utföra saker åt oss behöver vi diskutera
+vad vi själva behöver kunna för att AI inte ska göra oss svagare. Här finns en
+rad psykologiska och sociala aspekter att samtala om.
+.
+
+Centralt innehåll, artificiell intelligens 2
+Kurs 2 i ämnet har en tydlig progression från kurs 1, där det centrala innehållet
+både breddas och fördjupas i det som eleverna tidigare mött.
+Artificiell intelligens
+
+Inom detta område fördjupas den generella kunskapen ur motsvarande rubrik
+i nivå 1. Detta kan göras genom att i undervisningen fördjupa kunskaper
+relaterat till ett specifikt tillämpningsområde för AI.
+
+Skolverket 2024
+2024
+
+8 (9)
+
+Praktisk användning av AI
+
+Progressionen består i att kunskaperna breddas genom att fler steg i processen
+för problemlösning behandlas samt genom att olika metoder och algoritmer
+tydligare värderas. Kurs 2 ger också möjlighet att hantera inte bara enklare typer
+och principer utan även fördjupning inom ett urval av metoder och deras
+användning i specifika situationer.
+Förhållningssätt till AI
+
+Undervisningen i kurs 2 fördjupas genom att inte enbart jämföra utan även
+värdera och analysera konsekvenser och risker samt att fokusera på svagheter i
+AI-lösningar.
+
+Skolverket 2024
+2024
+
+9 (9)
+
+
