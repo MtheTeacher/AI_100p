@@ -177,9 +177,38 @@
         from { opacity: 0.3; }
         to { opacity: 0.7; }
       }
+    /* --- Back Button CSS --- */
+      .back-button {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: rgba(0,0,0,0.3); /* Darker for better visibility on various backgrounds */
+        border: 1px solid rgba(255,255,255,0.3);
+        border-radius: 50px;
+        padding: 10px 15px; /* Slightly smaller padding */
+        font-size: 0.9rem; /* Slightly smaller font */
+        color: white;
+        text-decoration: none;
+        backdrop-filter: blur(8px); /* Slightly less blur */
+        transition: all 0.3s ease;
+        z-index: 1000; /* Ensure it's on top */
+        display: flex; /* For icon alignment */
+        align-items: center; /* For icon alignment */
+      }
+
+      .back-button:hover {
+        background: rgba(0,0,0,0.5); /* Darker hover */
+        transform: translateX(-3px); /* Slightly less transform */
+      }
+      .back-button i {
+        margin-right: 8px; /* Space between icon and text */
+      }
     </style>
   </head>
   <body>
+    <a href="../index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i>Tillbaka
+    </a>
     <div class="slide-container">
       <i class="fas fa-lightbulb lightbulb-icon"></i>
       <div class="header">
