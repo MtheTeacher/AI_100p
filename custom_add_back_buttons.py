@@ -6,39 +6,39 @@ base_dir = '/home/ubuntu/course_website/Artificiell_Intelligens_Nivå1_kurs'
 
 pages_and_parents = {
     # Level 1 pages (parent is index.html)
-    'course_introduction.html': 'index.html',
-    'ai_definitions.html': 'index.html',
-    'mathematical_foundations.html': 'index.html',
-    'data_importance.html': 'index.html',
-    'ai_techniques.html': 'index.html',
-    'practical_applications.html': 'index.html',
-    'human_vs_ai.html': 'index.html',
-    'ethics_society.html': 'index.html',
-    'interactive_exercises.html': 'index.html',
+    'introduction/course_introduction.html': '../index.html',
+    'definitions/ai_definitions.html': '../index.html',
+    'foundations/mathematical_foundations.html': '../index.html',
+    'data/data_importance.html': '../index.html',
+    'techniques/ai_techniques.html': '../index.html',
+    'applications/practical_applications.html': '../index.html',
+    'human/human_vs_ai.html': '../index.html',
+    'ethics/ethics_society.html': '../index.html',
+    'interactive/interactive_exercises.html': '../index.html',
 
     # Level 2 pages
-    'three_projects.html': 'course_introduction.html',
+    'introduction/three_projects.html': 'course_introduction.html',
 
-    'turing_test.html': 'ai_definitions.html',
-    'ai_coined.html': 'ai_definitions.html',
-    'expert_systems.html': 'ai_definitions.html',
-    'deep_blue_kasparov.html': 'ai_definitions.html',
-    'deep_learning_breakthrough.html': 'ai_definitions.html',
+    'definitions/turing_test.html': 'ai_definitions.html',
+    'definitions/ai_coined.html': 'ai_definitions.html',
+    'definitions/expert_systems.html': 'ai_definitions.html',
+    'definitions/deep_blue_kasparov.html': 'ai_definitions.html',
+    'definitions/deep_learning_breakthrough.html': 'ai_definitions.html',
 
-    'ai_in_netflix.html': 'practical_applications.html',
-    'ai_in_google_maps.html': 'practical_applications.html',
-    'ai_in_spotify.html': 'practical_applications.html',
-    'ai_in_instagram.html': 'practical_applications.html',
-    'ai_in_siri_alexa.html': 'practical_applications.html',
-    'ai_in_tesla.html': 'practical_applications.html',
-    'ai_in_ecommerce.html': 'practical_applications.html',
-    'ai_in_healthcare.html': 'practical_applications.html',
-    'ai_in_security.html': 'practical_applications.html',
-    'ai_in_transportation.html': 'practical_applications.html',
+    'applications/ai_in_netflix.html': 'practical_applications.html',
+    'applications/ai_in_google_maps.html': 'practical_applications.html',
+    'applications/ai_in_spotify.html': 'practical_applications.html',
+    'applications/ai_in_instagram.html': 'practical_applications.html',
+    'applications/ai_in_siri_alexa.html': 'practical_applications.html',
+    'applications/ai_in_tesla.html': 'practical_applications.html',
+    'applications/ai_in_ecommerce.html': 'practical_applications.html',
+    'applications/ai_in_healthcare.html': 'practical_applications.html',
+    'applications/ai_in_security.html': 'practical_applications.html',
+    'applications/ai_in_transportation.html': 'practical_applications.html',
 
     # These might not exist yet, will be skipped if so
-    'ai_prediction.html': 'ai_techniques.html',
-    'ai_robotics.html': 'ai_techniques.html',
+    'techniques/ai_prediction.html': 'ai_techniques.html',
+    'techniques/ai_robotics.html': 'ai_techniques.html',
 }
 
 back_button_css_marker = '/* --- Back Button CSS --- */'
